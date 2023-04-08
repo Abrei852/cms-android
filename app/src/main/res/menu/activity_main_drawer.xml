@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/fragment_home">
+    <group>
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/nav_home"
+            />
+        <item
+            android:id="@+id/nav_sign_out"
+            android:title="@string/nav_sign_out"
+            />
+    </group>
+
+</menu>
