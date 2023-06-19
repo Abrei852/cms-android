@@ -12,4 +12,5 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="nav_home">Home</string>
     <string name="nav_sign_out">Sign out</string>
+    <string name="sign_out">sign out</string>
 </resources>
