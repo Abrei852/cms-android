@@ -12,7 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.ae.cms.R
 import com.ae.cms.databinding.FragmentLoginBinding
 
-class LoginFragment : Fragment() {
+class AuthFragment : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
     private val sharedAuthViewModel: AuthViewModel by activityViewModels()
@@ -27,7 +27,7 @@ class LoginFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Data binding
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
         binding.apply {

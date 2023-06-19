@@ -1,9 +1,10 @@
-package com.ae.cms.ui.main
+package com.ae.cms.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -20,7 +21,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         binding.apply {
             authViewModel = sharedAuthViewModel
@@ -32,7 +33,11 @@ class HomeFragment : Fragment() {
                 findNavController().popBackStack(R.id.loginFragment, false)
             }
         }
+        Toast.makeText(
+            context,
+            sharedAuthViewModel.databaseSnapshot.value.toString(),
+            Toast.LENGTH_LONG
+        ).show()
         return binding.root
     }
-
 }
